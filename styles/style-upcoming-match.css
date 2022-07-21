@@ -64,6 +64,8 @@ h1 {
     height: 100%;
 }
 
+/* second section style  */
+
 .live-matches {
     display: flex;
     gap: 15px;
@@ -133,6 +135,7 @@ h1 {
     color: dimgray;
 }
 
+/* footer style  */
 footer {
     position: absolute;
     margin-top: 10px;
