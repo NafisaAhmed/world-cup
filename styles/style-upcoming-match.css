@@ -2,7 +2,6 @@
 
 html {
     position: relative;
-    min-height: 100%;
 }
 
 body {
@@ -11,9 +10,9 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 40px 120px;
 }
 
 h1 {
@@ -26,18 +25,15 @@ h1 {
 .top-banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 75px;
-    width: 1100px;
-    height: 550px;
+    max-width: 1100px;
+    max-height: 550px;
     background-color: #161616;
     border-radius: 30px;
-    margin-top: 40px;
     margin-bottom: 100px;
 }
 
 .show-info {
-    padding-top: 40px;
-    padding-left: 80px;
+    padding: 40px 75px;
     text-align: left;
 
 }
@@ -70,14 +66,14 @@ h1 {
 
 .live-matches {
     display: flex;
-    column-gap: 25px;
+    gap: 15px;
     margin-bottom: 100px;
 }
 
 .categories {
     display: flex;
     flex-direction: column;
-    background-color: #161616;
+    background-color: #4d4b4b;
     border-radius: 10px;
     height: 240px;
     padding: 30px;
@@ -95,6 +91,7 @@ h1 {
 
 .categories button:focus {
     background-color: red;
+    color: white;
 }
 
 .matches {
@@ -183,4 +180,248 @@ footer {
 
 .fa-brands {
     color: aliceblue;
+}
+
+@media screen and (max-width:576px) {
+    main {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        margin: 5px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .top-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 510px;
+        min-height: 103.3vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+    }
+
+    .show-info {
+        padding: 20px 100px;
+        text-align: center;
+    }
+
+    .show-info-para {
+        height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .show-info p {
+        font-size: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .show-info button {
+        font-size: 25px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .side-image {
+        position: relative;
+        margin-top: -50px;
+        text-align: center;
+        padding: 0 120px;
+    }
+
+    .side-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .live-matches {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 100px;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background-color: white;
+    }
+
+    .categories button {
+        width: auto;
+        height: 60px;
+        font-size: 25px;
+        font-weight: 600;
+        border: 1px solid lightgrey;
+        padding: 10px 40px;
+    }
+
+    .matches {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .match-country img {
+        width: 200px;
+        height: 80px;
+    }
+
+    footer {
+        margin-top: 1.5em;
+        height: 28%;
+    }
+
+    .last-goal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    .last-goal h3 {
+        margin-top: 5px;
+    }
+
+    .footer-titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .footer-titles p {
+
+        font-size: 18px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 30px;
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    main {
+        margin: 50px 50px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .top-banner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 80vh;
+        grid-gap: 1px;
+        margin-bottom: 60px;
+    }
+
+    .show-info {
+        padding: 40px 50px 60px 90px;
+    }
+
+    .show-info-para {
+        height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .show-info p {
+        font-size: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .side-image {
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .side-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .live-matches {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 0px;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+        border: none;
+        background-color: white;
+        padding: 0;
+        margin-bottom: 30px;
+        height: 80px;
+    }
+
+    .categories button {
+        width: 260px;
+        height: 80px;
+        font-size: 20px;
+        font-weight: 600;
+        border: 1px solid lightgrey;
+        padding: 10px 40px;
+    }
+
+    .matches {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        width: 100%;
+    }
+
+    .match-country img {
+        width: 150px;
+        height: 80px;
+    }
+
+    footer {
+        margin-top: 0px;
+        height: 40%;
+    }
+
+    .last-goal h3 {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .last-goal {
+        text-align: center;
+        padding: 0 auto;
+    }
+
+    .footer-titles {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 5px;
+
+    }
+
+    .footer-titles p {
+        font-size: 18px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 30px;
+        font-size: 25px;
+        padding-top: 20px;
+    }
 }
